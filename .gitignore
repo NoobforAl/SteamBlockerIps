@@ -50,3 +50,15 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# VScode
+.vscode
+
+# waka time
+.wakatime-project
+
+# test temp files
+app
+blockips.txt
+data.json
+build
