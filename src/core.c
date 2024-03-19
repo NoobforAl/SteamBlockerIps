@@ -30,13 +30,17 @@ int enable_ips(void)
 
     char *line = NULL;
     size_t len = 0;
-    int i = 0;
+
+    int num_of_lines_skip_of_file = 2;
+    int skip = 0;
+
+    int min_size_of_line = 7;
 
     while (getline(&line, &len, file) != -1)
     {
-        if (++i < 2)
+        if (++skip < num_of_lines_skip_of_file)
             continue;
-        if (strlen(line) < 5)
+        if (strlen(line) < min_size_of_line)
             continue;
         if (line[len - 1] == '\n')
             line[len - 1] = 0;
